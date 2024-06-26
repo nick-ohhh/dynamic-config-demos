@@ -24,7 +24,7 @@ jobs:
     executor: base
     steps:
       - checkout
-      - run: echo "Running job b"
+      - run: echo "Running job b, trying to use a restricted context $MAIN_BRANCH"
       - run: cat path_b/README.md
 
 workflows:
@@ -36,4 +36,5 @@ workflows:
   workflow-b:
     when: << pipeline.parameters.run-path-b >>
     jobs:
-      - job_b
+      - job_b:
+          context: main-branch
