@@ -1,3 +1,1 @@
-New change to path_a
-
-test
+test for config policy
