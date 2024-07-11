@@ -43,5 +43,5 @@ workflows:
   workflow-b:
     when: << pipeline.parameters.run-path-b >>
     jobs:
-      - job_b:
-          context: main-branch
+      - job_b
+      #     context: main-branch
