@@ -8,8 +8,8 @@ parameters:
     type: boolean
     default: false
 
-orbs:
-  aws-cli: circleci/aws-cli@4.1.3
+# orbs:
+#   aws-cli: circleci/aws-cli@4.1.3
 
 executors:
   base:
@@ -21,8 +21,8 @@ jobs:
     executor: base
     steps:
       - checkout
-      - aws-cli/setup:
-          profile_name: test
+      # - aws-cli/setup:
+      #     profile_name: test
       - run: echo "Running job a, and our context value is $PATH_FILTERING_TEST"
       - run: cat path_a/README.md
   job_b:
